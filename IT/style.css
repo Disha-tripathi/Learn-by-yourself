@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+.container{
+  /* border: 1px solid; */
+  display: block;
+  margin: 40px auto;
+  width: 93%;
+  padding: 2px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color:#f1f0f9;
+  border-radius: 17px;
+}
+.text{
+  font-size: 52px;
+  text-align: center;
+  margin-top: 25px;
+  color: #0f5188;
+  
+} 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: auto; /* Add this rule */
+}
+
+.nav-links li {
+  margin-right: 50px;
+}
+
+.nav-links a {
+  color: #141313;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+ /* Font */
+
+   *,
+   *::before,
+   *::after {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+   
+   :root {
+     --pmcolor: #f1f0f9;
+     --sdcolor: #fefefe;
+     --ttcolor: #2e2e2e;
+   }
+   
+   html,
+   body {
+     width: 100%;
+     height: 100vh;
+     font-family: "Poppins", sans-serif;
+     color: var(--ttcolor);
+     /* background-color: var(--pmcolor); */
+      /* background-color: #0f5188; */
+   }
+   
+   a {
+     color: inherit;
+     text-decoration: none;
+   }
+   
+   section {
+     --space: 1.25rem;
+     width: 90%;
+     margin: 2rem auto;
+     display: grid;
+     gap: var(--space);
+     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+   }
+   
+   .card {
+     width: 100%;
+     cursor: default;
+     padding: var(--space);
+     border-radius: 0.25rem;
+     background-color: var(--sdcolor);
+     transition: transform 0.3s ease-in-out;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     
+   }
+   
+   .card:hover {
+     transform: translateY(-0.5rem);
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   }
+   
+   .card-img {
+     width: 100%;
+     height: 15rem;
+     overflow: hidden;
+     position: relative;
+     border-radius: 0.25rem;
+   }
+   
+   .card-img img {
+     width: 100%;
+     height: 100%;
+     display: block;
+     object-fit: cover;
+     object-position: center;
+   }
+   
+   /* .card-img figcaption {
+     background-color: var(--ttcolor);
+     color: var(--sdcolor);
+     font-size: 0.85rem;
+     padding: 0.5rem 0.75rem;
+     width: 100%;
+     position: absolute;
+     bottom: 0;
+   } */
+   
+   .card-title {
+     text-transform: capitalize;
+     margin: 0.75rem 0;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    
+   }
+   .card-body{
+    padding: 0.75rem 0;
+
+   }
+   .card-text{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+   }
+/*    
+.pushable {
+  position: relative;
+  background: transparent;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  outline-offset: 4px;
+  outline-color: deeppink;
+  transition: filter 250ms;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  
+}
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background: #9ca5c4; */
+  /*background-color: #0f5188;
+  border-radius: 8px;
+  filter: blur(2px);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background: linear-gradient(
+    to right,
+    #23527c 0%,
+    #0274b3 8%,
+    #337ab7 92%,
+    #0f5188 100%
+  );
+  
+}
+
+.front {
+  display: block;
+  position: relative;
+  border-radius: 8px;*/
+  /* background: hsl(248, 53%, 58%); *//*
+  background-color: #0f5188;
+  padding: 10px 32px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  
+}
+
+.pushable:hover {
+  filter: brightness(110%);
+}
+
+.pushable:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.pushable:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+} */
+/* From Uiverse.io by McHaXYT */ 
+/* .button {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background-color: #151515;
+  color: #eee;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10PX;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button-span {
+  color: #aaa;
+} */
+ /* From Uiverse.io by adeladel522 */ 
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: rgb(0 107 179);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 58px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #cbd8e2;
+  text-decoration: none;
+  cursor: pointer;
+} 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+
+
+#my_popover{
+  background-color:#fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; 
+  position: relative;
+  display: flex;
+}
+
+.backdrop {
+  display: none;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+h1{
+  font-weight: 700;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+
+}
+/* .pop_card{
+  background-color: #5e2626;
+  width: 100%;
+  cursor: default;
+  padding: var(--space);
+  border-radius: 0.25rem;
+  background-color: var(--sdcolor);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  max-width: 300px;
+ border: 1px solid;
+} */
+.allpopcard{
+
+}
